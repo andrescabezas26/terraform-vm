@@ -18,36 +18,6 @@ Incluye red virtual, subred, IP pública, grupo de seguridad y la VM lista para 
 ```bash
 az login
 ```
-
-## ⚙️ Despliegue de la infraestructura
-
-### Opción 1: Scripts automatizados (Recomendado)
-
-```bash
-# Desplegar
-bash scripts/deploy.sh
-
-# Destruir
-bash scripts/destroy.sh
-```
-
-### Opción 2: Comandos manuales
-
-```bash
-# Configurar variables
-cp terraform.tfvars.example terraform.tfvars
-# Edita terraform.tfvars con tus valores
-
-# Desplegar
-terraform init
-terraform validate
-terraform plan
-terraform apply
-
-# Ver outputs
-terraform output
-```
-
 🔐 Credenciales de acceso
 
 El proyecto usa **autenticación por contraseña**. Configura tus credenciales en `terraform.tfvars`:
@@ -79,7 +49,6 @@ Para verificar el sistema operativo:
 ```bash
 ssh azureuser@<PUBLIC_IP> "uname -a"
 ```
-## Prueba de Conexión exitosa a VM
 
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)
